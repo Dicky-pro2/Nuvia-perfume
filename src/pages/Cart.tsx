@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { 
   FiShoppingBag, FiTrash2, FiMinus, FiPlus, 
   FiArrowLeft, FiTruck, FiShield, FiGift,
@@ -52,11 +52,11 @@ const recommendedProducts = [
 ]
 
 const Cart = () => {
+  const navigate = useNavigate()
   const { cartItems, removeFromCart, updateQuantity, cartTotal } = useCart()
   const [promoCode, setPromoCode] = useState('')
   const [promoApplied, setPromoApplied] = useState(false)
   const [promoDiscount, setPromoDiscount] = useState(0)
-  const [isCheckingOut, setIsCheckingOut] = useState(false)
 
   const shipping = cartTotal > 150 ? 0 : 15
   const tax = cartTotal * 0.08
@@ -64,7 +64,6 @@ const Cart = () => {
   const total = cartTotal + shipping + tax - discount
 
   const handleApplyPromo = () => {
-    // Simulate promo code validation
     if (promoCode.toUpperCase() === 'LUXURY20') {
       setPromoDiscount(cartTotal * 0.2)
       setPromoApplied(true)
@@ -75,12 +74,7 @@ const Cart = () => {
   }
 
   const handleCheckout = () => {
-    setIsCheckingOut(true)
-    // Simulate checkout process
-    setTimeout(() => {
-      setIsCheckingOut(false)
-      // Navigate to checkout or show success
-    }, 2000)
+    navigate('/checkout')
   }
 
   const formatPrice = (price: number) => {
@@ -397,24 +391,10 @@ const Cart = () => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={handleCheckout}
-                    disabled={isCheckingOut}
                     className="w-full bg-gold text-black py-4 rounded-full font-semibold text-lg hover:bg-gold-dark transition-all duration-300 mb-4 flex items-center justify-center gap-2"
                   >
-                    {isCheckingOut ? (
-                      <>
-                        <motion.div
-                          animate={{ rotate: 360 }}
-                          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                          className="w-5 h-5 border-2 border-black border-t-transparent rounded-full"
-                        />
-                        Processing...
-                      </>
-                    ) : (
-                      <>
-                        Proceed to Checkout
-                        <FiChevronRight />
-                      </>
-                    )}
+                    Proceed to Checkout
+                    <FiChevronRight />
                   </motion.button>
 
                   {/* Trust Badges */}
@@ -506,33 +486,6 @@ const Cart = () => {
           </motion.div>
         )}
       </div>
-
-      {/* Quick Add Modal */}
-      <AnimatePresence>
-        {isCheckingOut && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center"
-          >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-gradient-to-b from-gray-900 to-black rounded-2xl p-8 border border-white/10 max-w-md w-full mx-4 text-center"
-            >
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                className="w-16 h-16 border-4 border-gold border-t-transparent rounded-full mx-auto mb-6"
-              />
-              <h3 className="text-2xl font-bold text-white mb-2">Processing Order</h3>
-              <p className="text-white/50">Please wait while we prepare your checkout...</p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   )
 }

@@ -37,14 +37,20 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Shop */}
           <div>
             <h4 className="text-white font-semibold mb-6">Shop</h4>
             <ul className="space-y-3">
-              {['All Products', 'New Arrivals', 'Best Sellers', 'Gift Sets', 'Samples'].map((item) => (
-                <li key={item}>
-                  <Link to="/collection" className="text-white/50 hover:text-gold transition-colors text-sm">
-                    {item}
+              {[
+                { name: 'All Products', path: '/collection' },
+                { name: 'New Arrivals', path: '/collection' },
+                { name: 'Best Sellers', path: '/collection' },
+                { name: 'Gift Sets', path: '/collection' },
+                { name: 'Packaging', path: '/packaging' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="text-white/50 hover:text-gold transition-colors text-sm">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -55,10 +61,16 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">About</h4>
             <ul className="space-y-3">
-              {['Our Story', 'Craftsmanship', 'Sustainability', 'Press', 'Careers'].map((item) => (
-                <li key={item}>
-                  <Link to="/about" className="text-white/50 hover:text-gold transition-colors text-sm">
-                    {item}
+              {[
+                { name: 'Our Story', path: '/about' },
+                { name: 'Craftsmanship', path: '/packaging' },
+                { name: 'Sustainability', path: '/about' },
+                { name: 'Journal', path: '/journal' },
+                { name: 'Careers', path: '/about' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link to={item.path} className="text-white/50 hover:text-gold transition-colors text-sm">
+                    {item.name}
                   </Link>
                 </li>
               ))}

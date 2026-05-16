@@ -156,7 +156,7 @@ const About = () => {
               transition={{ delay: 0.7 }}
               className="text-white/70 text-lg md:text-xl leading-relaxed mb-12 max-w-2xl"
             >
-              Since 2009, L'Essence has been crafting more than just fragrances—we create 
+              Since 2009, Nuvia Perfume has been crafting more than just fragrances—we create 
               memories, evoke emotions, and capture the essence of life's most precious moments.
             </motion.p>
 
@@ -256,7 +256,7 @@ const About = () => {
               
               <div className="space-y-4 text-white/60 text-lg leading-relaxed">
                 <p>
-                  L'Essence was born from a simple yet profound belief: that fragrance has 
+                  Nuvia Perfume was born from a simple yet profound belief: that fragrance has 
                   the power to transform moments into memories. Our founder, Isabella Laurent, 
                   trained at the world-renowned Grasse Institute of Perfumery, where she 
                   mastered the delicate alchemy of scent creation.
@@ -306,7 +306,7 @@ const About = () => {
           >
             <p className="text-gold text-sm tracking-[0.3em] uppercase mb-4">Our Philosophy</p>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              The Pillars of <span className="text-gold">L'Essence</span>
+              The Pillars of <span className="text-gold">Nuvia Perfume</span>
             </h2>
             <p className="text-white/60 max-w-2xl mx-auto text-lg">
               Every decision we make is guided by our unwavering commitment to these core values
@@ -506,7 +506,7 @@ const About = () => {
               
               <div className="space-y-4 text-white/60 text-lg leading-relaxed">
                 <p>
-                  Creating a L'Essence fragrance is a journey that spans continents and 
+                  Creating a Nuvia Perfume fragrance is a journey that spans continents and 
                   can take years to complete. Our master perfumers travel to remote corners 
                   of the world, building relationships with local farmers and distillers 
                   to source the most exceptional raw materials.
@@ -601,7 +601,7 @@ const About = () => {
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Experience the
               <br />
-              <span className="text-gold">L'Essence</span> Difference
+              <span className="text-gold">Nuvia Perfume</span> Difference
             </h2>
             <p className="text-white/60 text-lg mb-12 max-w-2xl mx-auto">
               Discover your signature scent and become part of our story. 

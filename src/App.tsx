@@ -8,6 +8,10 @@ import CartProvider from './context/CartContext'
 import About from './pages/About'
 import Cart from './pages/Cart'
 import Journal from './pages/Journal'
+import Packaging from './pages/Packaging'
+import Account from './pages/Account'
+import Checkout from './pages/CheckOut'
+import JournalArticle from './pages/JournalArticle'
 
 function App() {
   return (
@@ -22,6 +26,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/journal" element={<Journal />} />
+            <Route path="/packaging" element={<Packaging />} />
+            <Route path="/account" element={<Account />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/journal/:id" element={<JournalArticle />} />
           </Routes>
           <Footer />
         </div>
