@@ -10,7 +10,7 @@ import Cart from './pages/Cart'
 import Journal from './pages/Journal'
 import Packaging from './pages/Packaging'
 import Account from './pages/Account'
-import Checkout from './pages/CheckOut'
+import Checkout from './pages/Checkout'
 import JournalArticle from './pages/JournalArticle'
 
 function App() {
