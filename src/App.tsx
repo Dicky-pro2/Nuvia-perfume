@@ -10,7 +10,7 @@ import Cart from './pages/Cart'
 import Journal from './pages/Journal'
 import Packaging from './pages/Packaging'
 import Account from './pages/Account'
-import Checkout from './pages/CheckOut'
+import CheckOut from './pages/CheckOut'
 import JournalArticle from './pages/JournalArticle'
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
             <Route path="/journal" element={<Journal />} />
             <Route path="/packaging" element={<Packaging />} />
             <Route path="/account" element={<Account />} />
-            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/checkout" element={<CheckOut />} />
             <Route path="/journal/:id" element={<JournalArticle />} />
           </Routes>
           <Footer />
