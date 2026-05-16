@@ -126,7 +126,6 @@ const Navbar = () => {
                   Ctrl+K
                 </span>
               </motion.button>
-              // Replace the User button with:
               <Link to="/account">
                 <motion.button
                   whileHover={{ scale: 1.1 }}

@@ -1,11 +1,10 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, } from 'react-router-dom'
 import { 
   FiArrowLeft, FiCreditCard, FiTruck, FiGift,
   FiCheck, FiChevronRight, FiShield, FiLock,
-  FiMapPin, FiMail, FiPhone, FiUser,
-  FiEdit2, FiPlus, FiMinus, FiX
+  FiMapPin, FiMail, FiPlus,
 } from 'react-icons/fi'
 import { useCart } from '../context/CartContext'
 
@@ -52,7 +51,7 @@ const savedCards = [
 type CheckoutStep = 'shipping' | 'payment' | 'review'
 
 const Checkout = () => {
-  const navigate = useNavigate()
+ // const navigate = useNavigate()
   const { cartItems, cartTotal, clearCart } = useCart()
   const [currentStep, setCurrentStep] = useState<CheckoutStep>('shipping')
   const [isProcessing, setIsProcessing] = useState(false)
