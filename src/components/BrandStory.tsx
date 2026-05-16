@@ -69,7 +69,7 @@ const BrandStory = () => {
                 <span className="text-gold">Luxury</span>
               </h2>
               <p className="text-white/70 text-lg leading-relaxed">
-                Since 2009, L'Essence has been crafting extraordinary fragrances 
+                Since 2009, NUVIA PERFUME has been crafting extraordinary fragrances 
                 that capture the most precious moments in life. Our master perfumers 
                 travel the world in search of the rarest ingredients, ensuring each 
                 creation is a masterpiece of olfactory art.

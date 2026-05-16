@@ -6,6 +6,8 @@ import ProductDetails from './pages/ProductDetails'
 import Footer from './components/Footer'
 import CartProvider from './context/CartContext'
 import About from './pages/About'
+import Cart from './pages/Cart'
+import Journal from './pages/Journal'
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Route path="/collection" element={<Collection />} />
             <Route path="/product/:id" element={<ProductDetails />} />
             <Route path="/about" element={<About />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/journal" element={<Journal />} />
           </Routes>
           <Footer />
         </div>

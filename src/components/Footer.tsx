@@ -16,8 +16,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-6">
             <Link to="/" className="text-2xl font-bold tracking-widest">
-              <span className="text-gold">L'</span>
-              <span className="text-white">ESSENCE</span>
+              <span className="text-gold">NUVIA</span>
+              <span className="text-white">PERFUME</span>
             </Link>
             <p className="text-white/50 text-sm leading-relaxed">
               Crafting extraordinary fragrances that capture the essence of luxury 
@@ -69,7 +69,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">Contact</h4>
             <ul className="space-y-3 text-white/50 text-sm">
-              <li>contact@lessence.com</li>
+              <li>contact@nuviaperfume.com</li>
               <li>+1 (555) 123-4567</li>
               <li>123 Luxury Lane</li>
               <li>New York, NY 10001</li>
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/30 text-sm">© 2024 L'Essence. All rights reserved.</p>
+          <p className="text-white/30 text-sm">© 2024 NUVIA PERFUME. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link to="/privacy" className="text-white/30 hover:text-gold text-sm transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="text-white/30 hover:text-gold text-sm transition-colors">Terms of Service</Link>

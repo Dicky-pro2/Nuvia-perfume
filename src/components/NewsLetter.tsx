@@ -31,7 +31,7 @@ const Newsletter = () => {
           </h3>
           <p className="text-white/60 text-lg mb-12 max-w-2xl mx-auto">
             Subscribe to receive early access to new collections, exclusive offers, 
-            and the latest from the world of L'Essence.
+            and the latest from the world of NUVIA PERFUME.
           </p>
 
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">

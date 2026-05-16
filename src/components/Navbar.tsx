@@ -7,7 +7,7 @@ import { useCart } from '../context/CartContext'
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const { cartItems } = useCart()
+  const { cartCount } = useCart()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,8 +43,8 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold tracking-widest"
             >
-              <span className="text-gold">L'</span>
-              <span className="text-white">ESSENCE</span>
+              <span className="text-gold">NUVIA</span>
+              <span className="text-white">PERFUME</span>
             </motion.div>
           </Link>
 
@@ -92,13 +92,13 @@ const Navbar = () => {
                 className="text-white/80 hover:text-gold transition-colors"
               >
                 <FiShoppingBag className="w-5 h-5" />
-                {cartItems.length > 0 && (
+                {cartCount > 0 && (
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     className="absolute -top-2 -right-2 bg-gold text-black text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold"
                   >
-                    {cartItems.length}
+                    {cartCount}
                   </motion.span>
                 )}
               </motion.div>
